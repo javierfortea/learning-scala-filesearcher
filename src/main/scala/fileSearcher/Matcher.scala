@@ -2,7 +2,7 @@ package fileSearcher
 
 import java.io.File
 
-class Matcher(filter: String, rootLocation: String) {
+class Matcher(filter: String, val rootLocation: String = new File(".").getCanonicalPath()) {
   val rootIOObject = FileConverter.convertToIOObject(new File(rootLocation))
   
   def execute() = {
