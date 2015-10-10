@@ -8,7 +8,7 @@ class MatcherTests extends FlatSpec{
     val matcher = new Matcher("fake", "fakePath")
     val result = matcher.execute()
     
-    assert(result == List("fakePath"))
+    assert(result == List(("fakePath", None)))
   }
   
   "Matcher that is not passed a root file location" should "use the current location" in {
