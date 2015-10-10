@@ -33,7 +33,7 @@ class Matcher(filter: String, val rootLocation: String = new File(".").getCanoni
     
     val contentFilteredFiles = contentFilter match {
       case Some(dataFilter) => matchedFiles filter(iOObject 
-          => FilterChecker(dataFilter).matchesFileContent(iOObject.file))
+          => FilterChecker(dataFilter).findMatchedContentCount(iOObject.file) > 0)
       case None => matchedFiles
     }
     
