@@ -20,7 +20,7 @@ class FilterChecker(filter: String) {
       yield IOObject
   }
   
-  def findMatchedContentCount(file: File): Integer = {
+  def findMatchedContentCount(file: File): Int = {
     
     def getFilterMatchCount(content: String) =
       (filterAsRegex findAllIn content).length
